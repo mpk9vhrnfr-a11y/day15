@@ -1,15 +1,17 @@
-//
-//  main.c
-//  day15
-//
-//  Created by Sanaa Kumar on 02/11/25.
-//
-
-#include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return EXIT_SUCCESS;
+int main(void) {
+    int num, reversed = 0, remainder;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        remainder = num % 10;
+        reversed = reversed * 10 + remainder;
+        num /= 10;
+    }
+
+    printf("Reversed number: %d\n", reversed);
+    return 0;
 }
